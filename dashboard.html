@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="script.js" defer></script>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#0f1117",
+        card: "#161b22",
+        neon: "#00f0ff"
+      }
+    }
+  }
+}
+</script>
+</head>
+
+<body class="bg-primary text-white min-h-screen">
+
+<!-- Topbar -->
+<div class="flex justify-between items-center p-4 bg-card">
+  <h1 class="text-lg font-bold text-neon">AMG Dashboard</h1>
+
+  <div class="flex items-center gap-4">
+    <button onclick="toggleTheme()">🌙</button>
+    <button>🔔</button>
+    <button onclick="toggleSidebar()">☰</button>
+  </div>
+</div>
+
+<!-- Dashboard Content -->
+<div class="p-6 grid md:grid-cols-3 gap-6">
+
+  <!-- Wallet Card -->
+  <div class="bg-card p-6 rounded-xl hover:scale-105 transition">
+    <h4 class="text-gray-400">Wallet Balance</h4>
+    <p class="text-2xl font-bold text-neon">GH₵ 0.00</p>
+  </div>
+
+  <!-- Revenue -->
+  <div class="bg-card p-6 rounded-xl hover:scale-105 transition">
+    <h4 class="text-gray-400">Today’s Revenue</h4>
+    <p class="text-2xl font-bold text-neon">GH₵ 0.00</p>
+  </div>
+
+  <!-- Commission -->
+  <div class="bg-card p-6 rounded-xl hover:scale-105 transition">
+    <h4 class="text-gray-400">Commission</h4>
+    <p class="text-2xl font-bold text-neon">GH₵ 0.00</p>
+  </div>
+
+</div>
+
+<!-- Right Sidebar -->
+<div id="sidebar"
+ class="fixed top-0 right-0 h-full w-64 bg-card p-6 transform translate-x-full transition duration-300">
+
+  <button onclick="toggleSidebar()" class="text-neon mb-6">Close</button>
+
+  <nav class="space-y-4">
+    <a href="dashboard.html" class="block">Dashboard</a>
+    <a href="wallet.html" class="block">Wallet</a>
+    <a href="transactions.html" class="block">Transactions</a>
+    <a href="referrals.html" class="block">Referrals</a>
+    <a href="settings.html" class="block">Settings</a>
+  </nav>
+</div>
+
+</body>
+</html>
