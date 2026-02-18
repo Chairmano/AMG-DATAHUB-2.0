@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#0f1117",
+        card: "#161b22",
+        neon: "#00f0ff"
+      }
+    }
+  }
+}
+</script>
+</head>
+
+<body class="bg-primary text-white min-h-screen flex items-center justify-center">
+
+<div class="bg-card p-8 rounded-2xl w-full max-w-md shadow-lg">
+  <h2 class="text-2xl font-bold text-center text-neon mb-6">
+    Create Account
+  </h2>
+
+  <input placeholder="Full Name" class="input">
+  <input placeholder="Phone" class="input">
+  <input placeholder="Email" class="input">
+  <input type="password" placeholder="Password" class="input">
+  <input placeholder="Referral Code (Optional)" class="input">
+
+  <a href="dashboard.html">
+    <button class="w-full bg-neon text-black font-semibold py-3 rounded-lg hover:opacity-90 transition">
+      Create Account
+    </button>
+  </a>
+
+  <p class="text-center mt-4 text-sm">
+    Already have account?
+    <a href="index.html" class="text-neon">Login</a>
+  </p>
+</div>
+
+<style>
+.input{
+  width:100%;
+  margin-bottom:15px;
+  padding:12px;
+  background:#0f1117;
+  border-radius:8px;
+}
+</style>
+
+</body>
+</html>
